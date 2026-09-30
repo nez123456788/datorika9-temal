@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="lv">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mana spēle</title>
+<style>
+body { font-family: Arial, sans-serif; max-width: 680px; margin: 24px auto; padding: 16px; line-height: 1.6; }
+button, input { font: inherit; padding: 10px; margin: 4px; }
+button { cursor: pointer; }
+img { max-width: 100%; height: auto; }
+[hidden] { display: none !important; }
+
+</style>
+</head>
+<body>
+<h1>Donkoogs</h1>
+<p>Nogalini visus 5 bossus</p>
+<section id="sakums">
+  <h2>Sākuma ekrāns</h2>
+  <button onclick="paraditSpeli()">Sākt spēli</button>
+</section>
+<section id="laukums" hidden>
+  <h2>Spēles sākums</h2>
+  <p>bosi pieveikti: 0</p>
+  <p>tavs laiks: 0</p>
+  <p>tavs līmenis: 0</p>
+  <p>pieņemtais sitienu daudzums: 0</p>
+  <p>šeit tu</p>.</p>
+  <button onclick="paraditSakumu()">beigt spēli</button>
+</section>
+<script>
+// Gatavā palīdzība pogām. Šodien maini lapas tekstu un izvietojumu.
+function paraditSpeli() {
+  document.getElementById("sakums").hidden = true;
+  document.getElementById("laukums").hidden = false;
+}
+function paraditSakumu() {
+  document.getElementById("sakums").hidden = false;
+  document.getElementById("laukums").hidden = true;
+}
+</script>
+</body>
+</html>
